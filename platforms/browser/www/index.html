@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' http://chat.spotchat.in/ data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>SpotChat</title>
+    </head>
+    <body>
+        <div class="app container">
+        <div id="screeninfo"></div>
+            <div id='logo' class="col-sm-12" >
+                <img src="img/logo.png" width="100%">
+            </div>
+            <h1>Spot-Chat</h1>
+            <div id="deviceready" class="col-xs-12">
+            </div>
+            <!-- forms -->
+            <div class="hidden" id="form1">
+                <input class=form-control type=number placeholder="Mobile number" id=phone>
+                <input class=form-control type=email placeholder="email address" id=email>
+                <button class='form-control primary-button' id="form1_submit">Submit</button>
+            </div>
+            <div class=hidden id="form2">
+                <input type=text class=form-control placeholder=Mobile-OTP id="otp"> 
+                <button class="form-control primary-button" id="potp_verify">Verify</button>
+                <input type=text class=form-control placeholder=emailOTP id="evc"> 
+                <button class=primary-button id="evc_verify">Verify</button>
+            </div>
+            <div class=hidden id="form3">
+                <input class=form-control type=text placeholder="Name" id='name'>
+                <input type=hidden name=sex value=male>
+                <div class=col-xs-6>
+                    <button class=form-control id='male'>Male</button>
+                </div>
+                <div class=col-xs-6>
+                    <button class=form-control id='female'>Female</button>
+                </div>
+                    <input type=date class=form-control id='dob' placeholder="Date of birth">
+                    <input type=text class=form-control id='status' placeholder="Status message">
+                <div class=container>
+                <div class=label>Near by search</div>
+                    <div class=col-xs-4>
+                        <button class=form-control id='privacy_o'>Open</button>
+                    </div>
+                    <div class=col-xs-4>
+                        <button class=form-control id='privacy_f'>Friends only</button>
+                    </div>
+                    <div class=col-xs-4>
+                        <button class=form-control id='privacy_n'>Nobody</button>
+                    </div>
+                </div>
+                <button class=form-control id='form3_sumbit'>Submit</button>
+            </div>
+            <div class=hidden id="form4">
+                <table class=table >
+                    <tr class="trClone">
+                        <th class="fldName"></th>
+                        <td class="fldVal"></td>
+                        <td class="fldPriv"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class=hidden id="form5">
+            <div class=menu>
+                    <div class=item>
+                        <div class=icon><img class=menuicon src="img/icon/chat.png"></div>
+                        <div class=name>Chats</div>
+                    </div>
+                    <div class=item>
+                        <div class=icon><img class=menuicon src="img/icon/nearby.png"></div>
+                        <div class=name>Near by</div>
+                    </div>
+                    <div class=item>
+                        <div class=icon><img class=menuicon src="img/icon/friends.png"></div>
+                        <div class=name>Friends</div>
+                    </div>
+                    <div class=item>
+                        <div class=icon><img class=menuicon src="img/icon/settings.png"></div>
+                        <div class=name>Settings</div>
+                    </div>
+                </div>
+            </div>
+            <div class=hidden id="form6">
+            <div class="sidemenu">
+                    <div class=item>
+                        <div class=icon><img class=menuicon src="img/icon/chat.png"></div>
+                        <div class=name>Chats</div>
+                    </div>
+                    <div class=item>
+                        <div class=icon><img class=menuicon src="img/icon/nearby.png"></div>
+                        <div class=name>Near by</div>
+                    </div>
+                    <div class=item>
+                        <div class=icon><img class=menuicon src="img/icon/friends.png"></div>
+                        <div class=name>Friends</div>
+                    </div>
+                    <div class=item>
+                        <div class=icon><img class=menuicon src="img/icon/settings.png"></div>
+                        <div class=name>Settings</div>
+                    </div>
+                </div>
+                <div class="col-xs-8">
+                    <div class=user>
+                        <div class=upropic><img class=upro src="img/profile/pic.png"></div>
+                        <div class=newmsg>5</div>
+                        <div class=name>Name of friend</div>
+                        <div class=status>This is a samble status message</div>
+                        <div class=msg>M-30(300m from you)</div>
+                        
+                    </div>
+
+                    <div class=user>
+                        <div class=upropic><img class=upro src="img/profile/pic.png"></div>
+                        <div class=newmsg>0</div>
+                        <div class=name>Name of friend</div>
+                        <div class=status>This is a samble status message</div>
+                        <div class=msg>F-35(500m from you)</div>
+                    </div>
+
+                    <div class=user>
+                        <div class=upropic><img class=upro src="img/profile/pic.png"></div>
+                        <div class=newmsg>1</div>
+                        <div class=name>Name of friend</div>
+                        <div class=status>This is a samble status message</div>
+                        <div class=msg>M-25(1km from you)</div>
+                    </div>
+
+                    <div class=user>
+                        <div class=upropic><img class=upro src="img/profile/pic.png"></div>
+                        <div class=newmsg>0</div>
+                        <div class=name>Name of friend</div>
+                        <div class=status>This is a samble status message</div>
+                        <div class=msg>M-18(30km from you)</div>
+                    </div>
+
+                    <div class=user>
+                        <div class=upropic><img class=upro src="img/profile/pic.png"></div>
+                        <div class=newmsg>4</div>
+                        <div class=name>Name of friend</div>
+                        <div class=status>This is a samble status message</div>
+                        <div class=msg>M-21(20km from you)</div>
+                    </div>
+
+                    <div class=user>
+                        <div class=upropic><img class=upro src="img/profile/pic.png"></div>
+                        <div class=newmsg>1</div>
+                        <div class=name>Name of friend</div>
+                        <div class=status>This is a samble status message</div>
+                        <div class=msg>F-20(30m from you)</div>
+                    </div>
+                </div>
+            </div>
+            <div class=hidden id="form7">
+            </div>
+            <div class=hidden id=form8>
+            </div>
+            <div class=hidden id=form9>
+            </div>
+            <div class=hidden id=form10>
+            </div>
+        </div>
+        <div class=hidden id=form4>
+            </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
